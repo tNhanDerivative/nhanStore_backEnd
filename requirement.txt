@@ -1,5 +1,4 @@
-
-django-extensions
+asgiref==3.6.0
 backports.zoneinfo==0.2.1
 certifi==2022.12.7
 cffi==1.15.1
@@ -10,6 +9,7 @@ cryptography==39.0.1
 defusedxml==0.7.1
 Django==4.1.6
 django-cors-headers==3.13.0
+django-extensions==3.2.1
 django-rest-authtoken==2.1.4
 django-templated-mail==1.1.1
 djangorestframework==3.14.0
