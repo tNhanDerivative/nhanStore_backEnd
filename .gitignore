@@ -1,0 +1,14 @@
+SammyVENV
+.env
+
+
+
+
+**/*.pyc
+**/__pycache__
+
+
+media_root
+static_root
+
+**/*.sqlite3
