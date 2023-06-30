@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = 'django-insecure-e&&%oob%t+hx1k5xo4@7n^5m+*mb8x@(y)e4l+%g5@r^c0rab^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+#    'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -99,12 +99,8 @@ WSGI_APPLICATION = 'SammyStore.wsgi.application'
 if os.environ['ENV_SETTING'] == 'prod':
     DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASS'),
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
     }
 else:

@@ -1,4 +1,4 @@
-venv_nhanStore
+venv
 .env
 
 
@@ -6,7 +6,7 @@ venv_nhanStore
 
 **/*.pyc
 **/__pycache__
-
+**/migrations
 
 media_root
 static_root

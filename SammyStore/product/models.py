@@ -45,18 +45,18 @@ class Product(models.Model):
     
     def get_image(self):
         if self.image:
-            return urljoin(os.getenv('BASE_URL'), self.image.url)
+            return urljoin(os.getenv('BASE_URL'),self.image.url)
         return ''
     
     def get_thumbnail(self):
         if self.thumbnail:
-            return urljoin(os.getenv('BASE_URL'), self.thumbnail.url)
+            return urljoin(os.getenv('BASE_URL'),self.thumbnail.url)
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return urljoin(os.environ['BASE_URL'], self.thumbnail.url)
+                return urljoin(os.environ['BASE_URL'],self.thumbnail.url)
             else:
                 return ''
     
