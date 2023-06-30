@@ -8,7 +8,7 @@ venv_nhanStore
 **/__pycache__
 
 
-media_root
-static_root
+MEDIA_ROOT
+STATIC_ROOT
 
 **/*.sqlite3
